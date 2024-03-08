@@ -4,7 +4,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          name="description"
+          content="Explore the dynamic portfolio of Amit Kamat, showcasing expertise in web and app development. 
+          Engage with captivating projects and innovative solutions. 
+          Connect for collaborations and let's bring your digital vision to reality with Amit Kamat."
+        />
+        <meta
+          name="keywords"
+          content="Amit Kamat, Amit Kamat Portfolio, Amit, Amit Kamat CV, Amit Kamat Developer, Amit Developer, Amit Vercel Portfolio, amit kamat, amit kamat portfolio, amit kamat developer, ameet kamat"
+        />
+        <meta name="author" content="Amit Kamat" />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

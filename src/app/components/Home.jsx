@@ -7,11 +7,11 @@ import Typed from "typed.js";
 import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Socials from "./miscellaneous/Socials";
-
 // #5E3BE3
 
 const Home = ({ lightMode, setLightMode }) => {
   const el = useRef(null);
+
 
   useEffect(() => {
     const typed = new Typed(el.current, {
