@@ -23,7 +23,12 @@ const About = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Image src={"/images/about.png"} width={460} height={410} />
+          <Image
+            src={"/images/about.png"}
+            width={460}
+            height={410}
+            alt="About image"
+          />
         </Box>
         {/* Right */}
         <Box w={"50%"} h={"100%"} pt={"3.5rem"}>
@@ -38,13 +43,13 @@ const About = () => {
           </Box>
           <Box mt={"1.2rem"} w={"75%"} fontFamily={"Roboto"} color={"#777"}>
             <Text lineHeight={"26px"}>
-              Hey, I'm Amit Kamat, just breezing through my third year as an IT
+              Hey, I&apos;m Amit Kamat, just breezing through my third year as an IT
               student. Embracing the tech vibes and keeping it laid-back.
             </Text>
             <Text mt={"1.2rem"} lineHeight={"26px"}>
-              When I'm not in lecture survival mode, you'll find me getting
+              When I&apos;m not in lecture survival mode, you&apos;ll find me getting
               creative with web and app development – my kind of digital
-              playground. Oh, and I've got a soft spot for tinkering with
+              playground. Oh, and I&apos;ve got a soft spot for tinkering with
               blockchain too. Always up for learning something new, because, you
               know, the tech world never stands still.
             </Text>

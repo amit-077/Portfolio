@@ -26,7 +26,12 @@ const Navbar = ({ lightMode, setLightMode }) => {
             position={"relative"}
           >
             <Link>
-              <Image src="/images/Logo3.png" height={"3rem"} width={"3rem"} />
+              <Image
+                src="/images/Logo3.png"
+                height={"3rem"}
+                width={"3rem"}
+                alt="Logo"
+              />
             </Link>
             {/* Logo */}
           </Text>

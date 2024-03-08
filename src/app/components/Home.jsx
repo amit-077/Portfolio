@@ -71,7 +71,7 @@ const Home = ({ lightMode, setLightMode }) => {
                   color={lightMode ? "#333" : "#f1f1f1"}
                   display={"flex"}
                 >
-                  Hi, I'm{" "}
+                  Hi, I&apos;m{" "}
                 </Text>
                 <Text
                   color={"#5580E9"}
@@ -207,6 +207,7 @@ const Home = ({ lightMode, setLightMode }) => {
                 src={lightMode ? "/images/img1.png" : "/images/img1.png"}
                 width={400}
                 height={400}
+                alt="Home Image"
               />
             </Box>
           </Box>

@@ -37,7 +37,7 @@ const SkillBox = ({ icon }) => {
           w={"5rem"}
           boxShadow={`0 0 7px ${icon.color || "#eaeaea"}`}
         >
-          <Image src={icon.link} width={40} height={40} />
+          <Image src={icon.link} width={40} height={40} alt="Icon Link" />
         </Box>
         {/* Lower Text */}
         <Box mt={"0.2rem"} w={"6rem"}>

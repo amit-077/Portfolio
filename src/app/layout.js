@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         ></script>
         <link rel="stylesheet" href="styles.css"></link>
-        <title>Amit's Portfolio</title>
+        <title>Amit&apos;s Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/images/Logo4.png"></link>
       </head>
       <body style={{ overflowX: "hidden" }}>
