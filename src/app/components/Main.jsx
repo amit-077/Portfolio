@@ -2,7 +2,6 @@
 
 import { Box } from "@chakra-ui/react";
 import React, { useState } from "react";
-import React from "react";
 import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
