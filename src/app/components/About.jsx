@@ -50,24 +50,26 @@ const About = () => {
             </Text>
           </Box>
           <Box mt={"2.5rem"} w={"75%"} fontFamily={"Rubik"}>
-            <Button
-              px={"3rem"}
-              py={"1.5rem"}
-              bgColor={"#5580E9"}
-              color={"#f5f5f5"}
-              variant={"solid"}
-              border={"2px solid #5580E9"}
-              boxShadow={"2px 2px 7px #749bfc"}
-              transition={"0.2s all"}
-              _hover={{
-                border: "2px solid #5580E9",
-                bgColor: "#f5f5f5",
-                color: "#515151",
-                boxShadow: "none",
-              }}
-            >
-              GET CV
-            </Button>
+            <a href="/resume/resume.pdf">
+              <Button
+                px={"3rem"}
+                py={"1.5rem"}
+                bgColor={"#5580E9"}
+                color={"#f5f5f5"}
+                variant={"solid"}
+                border={"2px solid #5580E9"}
+                boxShadow={"2px 2px 7px #749bfc"}
+                transition={"0.2s all"}
+                _hover={{
+                  border: "2px solid #5580E9",
+                  bgColor: "#f5f5f5",
+                  color: "#515151",
+                  boxShadow: "none",
+                }}
+              >
+                GET CV
+              </Button>
+            </a>
           </Box>
         </Box>
       </HStack>

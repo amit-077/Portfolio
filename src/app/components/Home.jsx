@@ -155,42 +155,44 @@ const Home = ({ lightMode, setLightMode }) => {
                 </Button>
               </Box>
               <Box>
-                <Button
-                  bgColor={"#5580E9"}
-                  color={"#f5f5f5"}
-                  px={"1rem"}
-                  py={"1.4rem"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  justifyContent={"center"}
-                  role="group"
-                  boxShadow={
-                    lightMode ? "1px 1px 7px #749bfc" : "1px 1px 7px #555"
-                  }
-                  _hover={{ bgColor: "#5a85f2" }}
-                >
-                  <Box
+                <a href="/resume/resume.pdf" download="resume.pdf">
+                  <Button
+                    bgColor={"#5580E9"}
+                    color={"#f5f5f5"}
+                    px={"1rem"}
+                    py={"1.4rem"}
                     display={"flex"}
                     alignItems={"center"}
-                    position={"relative"}
-                    w={"90%"}
-                    overflow={"hidden"}
+                    justifyContent={"center"}
+                    role="group"
+                    boxShadow={
+                      lightMode ? "1px 1px 7px #749bfc" : "1px 1px 7px #555"
+                    }
+                    _hover={{ bgColor: "#5a85f2" }}
                   >
                     <Box
                       display={"flex"}
+                      alignItems={"center"}
                       position={"relative"}
-                      left={"-12%"}
-                      transition={"0.5s all"}
-                      _groupHover={{ left: "0%" }}
-                      justifyContent={"center"}
+                      w={"90%"}
+                      overflow={"hidden"}
                     >
-                      <DownloadIcon fontSize={"1.1rem"} />
-                      &nbsp;&nbsp;&nbsp;
-                      <Text>Download CV&nbsp;&nbsp;&nbsp;</Text>
-                      <ArrowForwardIcon fontSize={"1.1rem"} />
+                      <Box
+                        display={"flex"}
+                        position={"relative"}
+                        left={"-12%"}
+                        transition={"0.5s all"}
+                        _groupHover={{ left: "0%" }}
+                        justifyContent={"center"}
+                      >
+                        <DownloadIcon fontSize={"1.1rem"} />
+                        &nbsp;&nbsp;&nbsp;
+                        <Text>Download CV&nbsp;&nbsp;&nbsp;</Text>
+                        <ArrowForwardIcon fontSize={"1.1rem"} />
+                      </Box>
                     </Box>
-                  </Box>
-                </Button>
+                  </Button>
+                </a>
               </Box>
             </Box>
             <Box mt={"3rem"}>
