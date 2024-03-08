@@ -1,6 +1,6 @@
 import { Box, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
-import SwitchIcon from "./miscellaneous/switchIcon";
+import SwitchIcon from "./miscellaneous/SwitchIcon";
 
 const Navbar = ({ lightMode, setLightMode }) => {
   return (
