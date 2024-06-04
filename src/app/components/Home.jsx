@@ -12,7 +12,6 @@ import Socials from "./miscellaneous/Socials";
 const Home = ({ lightMode, setLightMode }) => {
   const el = useRef(null);
 
-
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
@@ -155,7 +154,7 @@ const Home = ({ lightMode, setLightMode }) => {
                 </Button>
               </Box>
               <Box>
-                <a href="/resume/resume.pdf" download="resume.pdf">
+                <a href="/Resume.pdf" download="Amit_Resume.pdf">
                   <Button
                     bgColor={"#5580E9"}
                     color={"#f5f5f5"}
