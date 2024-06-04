@@ -27,4 +27,13 @@ export const webCards = [
     link: "https://github.com/amit-077/linkedIn-post-generator",
     view: "https://linkedin-posts-generator.netlify.app/",
   },
+  {
+    key: 4,
+    tag: "Web Dev",
+    title: "Promptify",
+    description:
+      "A Chrome extension that optimizes your prompts directly within ChatGPT.",
+    image: "/cards/card6.jpg",
+    link: "https://github.com/amit-077/Promptify",
+  },
 ];

@@ -56,7 +56,7 @@ const TabsComponent = () => {
             Blockchain
           </Tab>
         </TabList>
-        <TabPanels mt={"1rem"}>
+        <TabPanels mt={"2rem"}>
           <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"}>
             {webCards.map((card) => {
               return (

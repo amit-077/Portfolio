@@ -7,6 +7,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import AnimatedCursor from "react-animated-cursor";
+import Contact from "./Contact";
 
 const Main = () => {
   const [lightMode, setLightMode] = useState(true);
@@ -24,6 +25,7 @@ const Main = () => {
       <About lightMode={lightMode} setLightMode={setLightMode} />
       <Skills lightMode={lightMode} setLightMode={setLightMode} />
       <Projects lightMode={lightMode} setLightMode={setLightMode} />
+      <Contact lightMode={lightMode} setLightMode={setLightMode} />
     </>
   );
 };
