@@ -7,6 +7,8 @@ import Typed from "typed.js";
 import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Socials from "./miscellaneous/Socials";
+import { BoltIcon, BulbIcon, CodeIcon, LaptopIcon } from "./utils/randomIcons";
+
 // #5E3BE3
 
 const Home = ({ lightMode, setLightMode }) => {
@@ -214,51 +216,10 @@ const Home = ({ lightMode, setLightMode }) => {
       </Box>
       {/* Random icons */}
       <Box>
-        <Box>
-          <Text
-            color={"#C1F8AB"}
-            position={"absolute"}
-            top={100}
-            right={200}
-            fontSize={"1.3rem"}
-          >
-            <i class="fa-solid fa-bolt"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"#C1F8AB"}
-            position={"absolute"}
-            bottom={2}
-            left={500}
-            fontSize={"1.3rem"}
-          >
-            <i class="fa-regular fa-lightbulb"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"#FFDBB0"}
-            position={"absolute"}
-            top={160}
-            right={30}
-            fontSize={"1.3rem"}
-          >
-            <i class="fa-solid fa-code"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"#854EEE"}
-            position={"absolute"}
-            top={440}
-            left={680}
-            fontSize={"1.3rem"}
-            opacity={"0.6"}
-          >
-            <i class="fa-solid fa-laptop-code"></i>
-          </Text>
-        </Box>
+        <BoltIcon top={100} right={200} />
+        <BulbIcon bottom={2} left={500} />
+        <CodeIcon top={160} right={30} />
+        <LaptopIcon top={440} left={680} />
       </Box>
     </Box>
   );

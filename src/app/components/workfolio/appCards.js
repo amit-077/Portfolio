@@ -16,6 +16,7 @@ export const appCards = [
       "An interactive app designed for learning essential programming concepts.",
     image: "/cards/card4.png",
     link: "https://github.com/amit-077/ByteBuddy_frontend",
+    view: "https://bytebuddydev.vercel.app/",
   },
   // {
   //   key: 3,

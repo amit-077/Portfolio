@@ -45,7 +45,8 @@ const SkillBox = ({ icon }) => {
             pt={
               icon.name.includes("Truffle") ||
               icon.name.includes("Hardhat") ||
-              icon.name.includes("Etherjs")
+              icon.name.includes("Etherjs") ||
+              icon.name.includes("Langchain")
                 ? "0.3rem"
                 : "0"
             }

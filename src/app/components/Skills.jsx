@@ -4,6 +4,7 @@ import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import SkillBox from "./miscellaneous/SkillBox";
 import { iconsArr } from "./miscellaneous/icons";
+import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 
 const Skills = () => {
   return (
@@ -17,6 +18,7 @@ const Skills = () => {
       pr={"5rem"}
       userSelect={"none"}
       draggable={"false"}
+      position={"relative"}
     >
       <Box
         pt={"2rem"}

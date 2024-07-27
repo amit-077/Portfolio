@@ -10,6 +10,15 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { Tilt } from "react-tilt";
+import {
+  BoltIcon,
+  BranchIcon,
+  BugIcon,
+  BulbIcon,
+  FolderIcon,
+  LaptopIcon,
+  NodeIcon,
+} from "./utils/randomIcons";
 
 const Contact = ({ lightMode, setLightMode }) => {
   const defaultOptions = {
@@ -27,42 +36,53 @@ const Contact = ({ lightMode, setLightMode }) => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const toast = useToast();
 
   const sendEmail = async () => {
-    if (!name || !mail || !message) {
-      toast({
-        title: "Please fill all the fields",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-      return;
-    }
+    try {
+      setLoading(true);
+      if (!name || !mail || !message) {
+        toast({
+          title: "Please fill all the fields",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+        return;
+      }
 
-    let data = await axios.post("https://api.emailjs.com/api/v1.0/email/send", {
-      service_id: "service_qhc37xl",
-      template_id: "template_lqks0l9",
-      user_id: "68bfaMEzMqBKD440P",
-      template_params: {
-        name: name,
-        mail: mail,
-        message: message,
-      },
-    });
+      let data = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          service_id: "service_qhc37xl",
+          template_id: "template_lqks0l9",
+          user_id: "68bfaMEzMqBKD440P",
+          template_params: {
+            name: name,
+            mail: mail,
+            message: message,
+          },
+        }
+      );
 
-    console.log(data);
-    if (data.status === 200) {
-      toast({
-        title: "Message sent!",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
-      setName("");
-      setMail("");
-      setMessage("");
+      console.log(data);
+      if (data.status === 200) {
+        toast({
+          title: "Message sent!",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        setName("");
+        setMail("");
+        setMessage("");
+      }
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -76,6 +96,7 @@ const Contact = ({ lightMode, setLightMode }) => {
       pr={"5rem"}
       pt={"3rem"}
       fontFamily={"Rubik"}
+      position={"relative"}
     >
       <Tilt options={defaultOptions}>
         <Box
@@ -160,6 +181,7 @@ const Contact = ({ lightMode, setLightMode }) => {
               <Button
                 px={"2.5rem"}
                 py={"1.3rem"}
+                isLoading={loading}
                 bgColor={"rgba(85,128,233, 0.6)"}
                 color={"#f5f5f5"}
                 variant={"solid"}
@@ -175,6 +197,13 @@ const Contact = ({ lightMode, setLightMode }) => {
               </Button>
             </Box>
           </Box>
+        </Box>
+        <Box>
+          <BulbIcon bottom={400} left={150} />
+          <BranchIcon top={430} left={300} />
+          <NodeIcon right={150} bottom={230} />
+          <BugIcon bottom={5} left={750} />
+          <LaptopIcon top={50} left={750} />
         </Box>
       </Tilt>
     </Box>

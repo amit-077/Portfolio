@@ -5,12 +5,13 @@ import Card from "./Card";
 import { webCards } from "../workfolio/webCards";
 import { appCards } from "../workfolio/appCards";
 import { blockchainCards } from "../workfolio/blockchainCards";
+import { allCards } from "../workfolio/allCards";
 
 const TabsComponent = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <Box mt={"2rem"}>
+    <Box mt={"2rem"} >
       <Tabs
         variant={"solid-rounded"}
         colorScheme={"white"}
@@ -32,6 +33,7 @@ const TabsComponent = () => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
+            boxShadow={'1px 1px 2px #ddd'}
           >
             Web App
           </Tab>
@@ -42,6 +44,7 @@ const TabsComponent = () => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
+            boxShadow={'1px 1px 2px #ddd'}
           >
             Mobile App
           </Tab>
@@ -52,8 +55,20 @@ const TabsComponent = () => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
+            boxShadow={'1px 1px 2px #ddd'}
           >
             Blockchain
+          </Tab>
+          <Tab
+            tabIndex={3}
+            bgColor={selectedTab == 3 ? "#5580E9" : "#fff"}
+            borderRadius={"0.6rem"}
+            transition={"0.4s all"}
+            _hover={{ bgColor: "#5580E9", color: "#fff" }}
+            fontWeight={"500"}
+            boxShadow={'1px 1px 2px #ddd'}
+          >
+            All
           </Tab>
         </TabList>
         <TabPanels mt={"2rem"}>
@@ -82,6 +97,7 @@ const TabsComponent = () => {
                   description={card.description}
                   image={card.image}
                   link={card.link}
+                  view={card?.view}
                 />
               );
             })}
@@ -96,6 +112,28 @@ const TabsComponent = () => {
                   description={card.description}
                   image={card.image}
                   link={card.link}
+                />
+              );
+            })}
+          </TabPanel>
+          <TabPanel
+            display={"flex"}
+            justifyContent={"left"}
+            gap={"3rem"}
+            pl={'2.5rem'}
+            flexWrap={"wrap"}
+            h={'100%'}
+          >
+            {allCards.map((card) => {
+              return (
+                <Card
+                  key={card.key}
+                  tag={card.tag}
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  link={card.link}
+                  view={card?.view}
                 />
               );
             })}

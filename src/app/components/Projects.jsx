@@ -9,18 +9,27 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import TabsComponent from "./miscellaneous/TabsComponent";
+import {
+  BoltIcon,
+  BranchIcon,
+  BugIcon,
+  FolderIcon,
+  LaptopIcon,
+  NodeIcon,
+} from "./utils/randomIcons";
 
 const Projects = () => {
   return (
     <Box
       id="projects"
       w={"100vw"}
-      h={"110vh"}
+      minH={"110vh"}
       bgColor={"#f5f5f5"}
       pl={"5rem"}
       pr={"5rem"}
       pt={"4rem"}
       fontFamily={"Rubik"}
+      position={"relative"}
     >
       <Box
         w={"100%"}
@@ -43,6 +52,14 @@ const Projects = () => {
         </Text>
       </Box>
       <TabsComponent />
+      <Box>
+        <BoltIcon top={200} right={150} />
+
+        <LaptopIcon top={180} left={200} pos={"absolute"} />
+        <BranchIcon top={280} left={370} />
+        <NodeIcon right={360} bottom={130} />
+        <BugIcon bottom={2} left={450} />
+      </Box>
     </Box>
   );
 };

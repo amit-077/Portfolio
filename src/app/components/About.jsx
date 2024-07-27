@@ -1,6 +1,7 @@
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 
 const About = () => {
   return (
@@ -80,52 +81,10 @@ const About = () => {
       </HStack>
       {/* Background Icons */}
       <Box>
-        <Box>
-          <Text
-            color={"#C1F8AB"}
-            position={"absolute"}
-            top={50}
-            right={300}
-            fontSize={"1.3rem"}
-          >
-            <i class="fa-solid fa-folder-open"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"violet"}
-            position={"absolute"}
-            top={150}
-            left={600}
-            fontSize={"1.3rem"}
-            opacity={"0.4"}
-          >
-            <i class="fa-solid fa-code-branch"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"#FFDBB0"}
-            position={"absolute"}
-            bottom={130}
-            right={150}
-            fontSize={"1.3rem"}
-          >
-            <i class="fa-solid fa-circle-nodes"></i>
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            color={"black"}
-            position={"absolute"}
-            bottom={5}
-            left={450}
-            fontSize={"1.4rem"}
-            opacity={"0.2"}
-          >
-            <i class="fa-solid fa-bug"></i>
-          </Text>
-        </Box>
+        <FolderIcon top={50} right={300} />
+        <BranchIcon top={150} left={600} />
+        <NodeIcon right={150} bottom={130} />
+        <BugIcon bottom={5} left={450} />
       </Box>
       {/* Background Icons */}
     </Box>
