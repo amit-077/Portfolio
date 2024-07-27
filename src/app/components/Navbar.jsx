@@ -27,12 +27,24 @@ const Navbar = ({ lightMode, setLightMode }) => {
           >
             <Link>
               <Image
-                src="/images/Logo3.png"
-                height={"3rem"}
-                width={"3rem"}
+                src="/images/logox.png"
+                height={"auto"}
+                width={"auto"}
+                transform={'scale(0.65)'}
                 alt="Logo"
               />
             </Link>
+             {/* <Text display={"flex"} pl={"0.5rem"} pr={"0.5rem"}>
+                <Text textShadow={"-3px -3px #e7e7e7"}>a</Text>
+                <Text textShadow={"-3px -3px #e7e7e7"}>M</Text>
+                <Text textShadow={"-3px -3px #e7e7e7"}>i</Text>
+                <Text
+                  textShadow={"-3px -3px #e7e7e7"}
+                  transform={"rotate(10deg)"}
+                >
+                  T
+                </Text> */}
+              {/* </Text> */}
             {/* Logo */}
           </Text>
         </Box>
