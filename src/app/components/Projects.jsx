@@ -18,13 +18,13 @@ import {
   NodeIcon,
 } from "./utils/randomIcons";
 
-const Projects = () => {
+const Projects = ({lightMode}) => {
   return (
     <Box
       id="projects"
       w={"100vw"}
       minH={"110vh"}
-      bgColor={"#f5f5f5"}
+      bgColor={lightMode ? "#f5f5f5": "#2c2c2c"}
       pl={"5rem"}
       pr={"5rem"}
       pt={"4rem"}
@@ -47,14 +47,13 @@ const Projects = () => {
           borderRadius: "1rem",
         }}
       >
-        <Text fontSize={"2.5rem"} fontWeight={"700"} color={"#000"}>
+        <Text fontSize={"2.5rem"} fontWeight={"700"} color={lightMode ? "#000": "#f1f1f1"}>
           WORKFOLIO
         </Text>
       </Box>
-      <TabsComponent />
+      <TabsComponent lightMode={lightMode}/>
       <Box>
         <BoltIcon top={200} right={150} />
-
         <LaptopIcon top={180} left={200} pos={"absolute"} />
         <BranchIcon top={280} left={370} />
         <NodeIcon right={360} bottom={130} />

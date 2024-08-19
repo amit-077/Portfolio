@@ -88,10 +88,10 @@ const Contact = ({ lightMode, setLightMode }) => {
 
   return (
     <Box
-      id="projects"
+      id="contact"
       w={"100vw"}
       h={"110vh"}
-      bgColor={"#f5f5f5"}
+      bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
       pl={"5rem"}
       pr={"5rem"}
       pt={"3rem"}
@@ -107,7 +107,7 @@ const Contact = ({ lightMode, setLightMode }) => {
           pt={"1rem"}
           pb={"2rem"}
           borderRadius={"1rem"}
-          boxShadow={"0 0 4px #dfdfdf"}
+          boxShadow={lightMode ? "0 0 4px #dfdfdf":  "0 0 7px #343c51"}
         >
           <Box w={"100%"} display={"flex"} justifyContent={"center"}>
             <Text
@@ -148,8 +148,10 @@ const Contact = ({ lightMode, setLightMode }) => {
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
-                bgColor={"#EDF1F7"}
-                _focusVisible={{ borderColor: "#e1e1e1" }}
+                bgColor={lightMode ? "#EDF1F7" : "#333"}
+                _focusVisible={{ borderColor: lightMode ? "#e1e1e1" : "#333" }}
+                borderColor={lightMode ? "#f1f1f1" : "#2c2c2c"}
+                color={lightMode ? "#333" : "#d1d1d1"}
               />
             </Box>
             <Box w={"100%"}>
@@ -159,8 +161,10 @@ const Contact = ({ lightMode, setLightMode }) => {
                   setMail(e.target.value);
                 }}
                 placeholder="Your Email"
-                bgColor={"#EDF1F7"}
-                _focusVisible={{ borderColor: "#e1e1e1" }}
+                bgColor={lightMode ? "#EDF1F7" : "#333"}
+                _focusVisible={{ borderColor: lightMode ? "#e1e1e1" : "#333" }}
+                borderColor={lightMode ? "#f1f1f1" : "#2c2c2c"}
+                color={lightMode ? "#333" : "#d1d1d1"}
               />
             </Box>
             <Box w={"100%"}>
@@ -170,9 +174,11 @@ const Contact = ({ lightMode, setLightMode }) => {
                   setMessage(e.target.value);
                 }}
                 placeholder="Your Message"
-                bgColor={"#EDF1F7"}
+                bgColor={lightMode ? "#EDF1F7" : "#333"}
+                _focusVisible={{ borderColor: lightMode ? "#e1e1e1" : "#333" }}
+                borderColor={lightMode ? "#f1f1f1" : "#2c2c2c"}
+                color={lightMode ? "#333" : "#d1d1d1"}
                 rows={5}
-                _focusVisible={{ borderColor: "#e1e1e1" }}
                 resize={"none"}
               />
             </Box>

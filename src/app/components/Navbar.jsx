@@ -27,7 +27,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
           >
             <Link>
               <Image
-                src="/images/logox.png"
+                src= {lightMode ? "/images/logox.png": "/images/logox_dark.png"}
                 height={"auto"}
                 width={"auto"}
                 transform={'scale(0.65)'}

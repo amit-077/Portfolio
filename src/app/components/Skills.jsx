@@ -6,13 +6,13 @@ import SkillBox from "./miscellaneous/SkillBox";
 import { iconsArr } from "./miscellaneous/icons";
 import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 
-const Skills = () => {
+const Skills = ({lightMode}) => {
   return (
     <Box
       id="skills"
       w={"100vw"}
       minH={"100vh"}
-      bgColor={"#f5f5f5"}
+      bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
       fontFamily={"Rubik"}
       pl={"5rem"}
       pr={"5rem"}
@@ -25,7 +25,7 @@ const Skills = () => {
         w={"100%"}
         fontWeight={"700"}
         fontSize={"2.5rem"}
-        color={"#000"}
+        color={lightMode ? "#000": "#f1f1f1"}
         position={"relative"}
         _before={{
           content: `""`,
@@ -48,7 +48,7 @@ const Skills = () => {
         rowGap={"2rem"}
       >
         {iconsArr.map((icon, index) => {
-          return <SkillBox icon={icon} key={index} />;
+          return <SkillBox icon={icon} key={index} lightMode={lightMode}/>;
         })}
       </Box>
     </Box>

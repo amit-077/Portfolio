@@ -7,11 +7,11 @@ import { appCards } from "../workfolio/appCards";
 import { blockchainCards } from "../workfolio/blockchainCards";
 import { allCards } from "../workfolio/allCards";
 
-const TabsComponent = () => {
+const TabsComponent = ({ lightMode }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <Box mt={"2rem"} >
+    <Box mt={"2rem"}>
       <Tabs
         variant={"solid-rounded"}
         colorScheme={"white"}
@@ -28,45 +28,57 @@ const TabsComponent = () => {
         <TabList gap={"2rem"} justifyContent={"center"}>
           <Tab
             tabIndex={0}
-            bgColor={selectedTab == 0 ? "#5580E9" : "#fff"}
+            bgColor={
+              selectedTab == 0 ? "#5580E9" : lightMode ? "#fff" : "#2c2c2c"
+            }
             borderRadius={"0.6rem"}
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={'1px 1px 2px #ddd'}
+            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
+            color={lightMode ? "#333" : "#f1f1f1"}
           >
             Web App
           </Tab>
           <Tab
             tabIndex={1}
-            bgColor={selectedTab == 1 ? "#5580E9" : "#fff"}
+            bgColor={
+              selectedTab == 1 ? "#5580E9" : lightMode ? "#fff" : "#2c2c2c"
+            }
             borderRadius={"0.6rem"}
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={'1px 1px 2px #ddd'}
+            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
+            color={lightMode ? "#333" : "#f1f1f1"}
           >
             Mobile App
           </Tab>
           <Tab
             tabIndex={2}
-            bgColor={selectedTab == 2 ? "#5580E9" : "#fff"}
+            bgColor={
+              selectedTab == 2 ? "#5580E9" : lightMode ? "#fff" : "#2c2c2c"
+            }
             borderRadius={"0.6rem"}
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={'1px 1px 2px #ddd'}
+            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
+            color={lightMode ? "#333" : "#f1f1f1"}
           >
             Blockchain
           </Tab>
           <Tab
             tabIndex={3}
-            bgColor={selectedTab == 3 ? "#5580E9" : "#fff"}
+            bgColor={
+              selectedTab == 3 ? "#5580E9" : lightMode ? "#fff" : "#2c2c2c"
+            }
             borderRadius={"0.6rem"}
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={'1px 1px 2px #ddd'}
+            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
+            color={lightMode ? "#333" : "#f1f1f1"}
           >
             All
           </Tab>
@@ -76,6 +88,7 @@ const TabsComponent = () => {
             {webCards.map((card) => {
               return (
                 <Card
+                  lightMode={lightMode}
                   key={card.key}
                   tag={card.tag}
                   title={card.title}
@@ -120,9 +133,9 @@ const TabsComponent = () => {
             display={"flex"}
             justifyContent={"left"}
             gap={"3rem"}
-            pl={'2.5rem'}
+            pl={"2.5rem"}
             flexWrap={"wrap"}
-            h={'100%'}
+            h={"100%"}
           >
             {allCards.map((card) => {
               return (

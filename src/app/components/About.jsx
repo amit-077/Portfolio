@@ -3,12 +3,16 @@ import Image from "next/image";
 import React from "react";
 import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 
-const About = () => {
+const About = ({ lightMode }) => {
   return (
     <Box
       w={"100vw"}
       h={"100vh"}
-      bgGradient={"linear-gradient(to top left,#f2f3f2 50%, #f5f5f5 50%)"}
+      bgGradient={
+        lightMode
+          ? "linear-gradient(to top left,#f2f3f2 50%, #f5f5f5 50%)"
+          : "linear-gradient(188deg, rgba(44,44,44,1) 10%, rgba(44,44,44,1) 130%)"
+      }
       fontFamily={"Rubik"}
       userSelect={"none"}
       draggable={"false"}
@@ -25,7 +29,7 @@ const About = () => {
           alignItems={"center"}
         >
           <Image
-            src={"/images/about.png"}
+            src={lightMode ? "/images/about.png":"/images/about_dark.png"}
             width={460}
             height={410}
             alt="About image"
@@ -33,7 +37,7 @@ const About = () => {
         </Box>
         {/* Right */}
         <Box w={"50%"} h={"100%"} pt={"3.5rem"}>
-          <Box w={"100%"} h={"100%"} color={"#000"}>
+          <Box w={"100%"} h={"100%"} color={lightMode ? "#000" : "#f5f5f5"}>
             <Text fontWeight={"700"} fontSize={"2.5rem"}>
               LET ME
             </Text>
@@ -42,7 +46,7 @@ const About = () => {
             </Text>
             {/* <Text fontWeight={'700'} fontSize={'2.5rem'}>INTRO</Text> */}
           </Box>
-          <Box mt={"1.2rem"} w={"75%"} fontFamily={"Roboto"} color={"#777"}>
+          <Box mt={"1.2rem"} w={"75%"} fontFamily={"Roboto"} color={lightMode ? "#777" : "#ccc"}>
             <Text lineHeight={"26px"}>
               Hey, I&apos;m Amit Kamat, just breezing through my third year as
               an IT student. Embracing the tech vibes and keeping it laid-back.
@@ -64,7 +68,7 @@ const About = () => {
                 color={"#f5f5f5"}
                 variant={"solid"}
                 border={"2px solid #5580E9"}
-                boxShadow={"2px 2px 7px #749bfc"}
+                boxShadow={lightMode ? "2px 2px 7px #749bfc" : "1px 1px 3px #749bfc"}
                 transition={"0.2s all"}
                 _hover={{
                   border: "2px solid #5580E9",

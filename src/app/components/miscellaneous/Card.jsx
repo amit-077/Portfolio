@@ -1,16 +1,16 @@
 import { Box, Button, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Card = ({ tag, title, description, image, link, view }) => {
+const Card = ({ tag, title, description, image, link, view, lightMode }) => {
   return (
     <Box
       w={"14rem"}
       h={"19rem"}
       textAlign={"left"}
-      bgColor={"#fff"}
+      bgColor={lightMode ? "#fff" : "#2c2c2c"}
       p={"0.8rem"}
       borderRadius={"0.5rem"}
-      boxShadow={"0 0 4px #ededed"}
+      boxShadow={lightMode ? "0 0 4px #ededed" : "0 0 4px #454545"}
       pb={"1.3rem"}
       role="group"
     >
@@ -95,11 +95,11 @@ const Card = ({ tag, title, description, image, link, view }) => {
         {/* overflow */}
         <Box position={"absolute"}>
           <Text
-            bgColor={"#fff"}
+            bgColor={lightMode ? "#fff" : "#2c2c2c"}
             pl={"0.8rem"}
             pr={"0.8rem"}
             pt={"0.4rem"}
-            color={"#777"}
+            color={lightMode ? "#777" : "#f1f1f1"}
             borderTopLeftRadius={"0.5rem"}
             borderTopRightRadius={"0.5rem"}
             fontSize={"0.8rem"}
@@ -108,7 +108,13 @@ const Card = ({ tag, title, description, image, link, view }) => {
           </Text>
         </Box>
       </Box>
-      <Box mt={"1rem"} w={"100%"} textAlign={"center"} fontWeight={"500"}>
+      <Box
+        mt={"1rem"}
+        w={"100%"}
+        textAlign={"center"}
+        fontWeight={"500"}
+        color={lightMode ? "#222" : "#e1e1e1"}
+      >
         <Text>{title}</Text>
       </Box>
       <Box
@@ -116,7 +122,7 @@ const Card = ({ tag, title, description, image, link, view }) => {
         w={"100%"}
         textAlign={"justify"}
         fontSize={"0.9rem"}
-        color={"#777"}
+        color={lightMode ? "#777": "#c1c1c1"}
       >
         <Text>{description}</Text>
       </Box>

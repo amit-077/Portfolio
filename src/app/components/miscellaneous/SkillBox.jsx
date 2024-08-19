@@ -17,7 +17,7 @@ const defaultOptions = {
   easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
 };
 
-const SkillBox = ({ icon }) => {
+const SkillBox = ({ icon, lightMode }) => {
   return (
     <Tilt options={defaultOptions}>
       <Box
@@ -30,17 +30,17 @@ const SkillBox = ({ icon }) => {
         <Box
           display={"flex"}
           justifyContent={"center"}
-          bgColor={icon.color ? icon.color : "#f1f1f1"}
+          bgColor={icon.color ? icon.color : lightMode ? "#f1f1f1": "#2c2c2c"}
           py={5}
           px={0}
           borderRadius={"50%"}
           w={"5rem"}
-          boxShadow={`0 0 7px ${icon.color || "#eaeaea"}`}
+          boxShadow={`0 0 7px ${icon.color || lightMode ? "#eaeaea": "#555"}`}
         >
           <Image src={icon.link} width={40} height={40} alt="Icon Link" />
         </Box>
         {/* Lower Text */}
-        <Box mt={"0.2rem"} w={"6rem"}>
+        <Box mt={"0.2rem"} w={"6rem"} color={lightMode ? '#222': "#f5f5f5"}>
           <Text
             pt={
               icon.name.includes("Truffle") ||
