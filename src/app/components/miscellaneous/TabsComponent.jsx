@@ -35,8 +35,12 @@ const TabsComponent = ({ lightMode }) => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
-            color={lightMode ? "#333" : "#f1f1f1"}
+            boxShadow={lightMode ? "1px 1px 2px #ddd" : "0px 0px 3px #656565"}
+            color={
+              lightMode && selectedTab === 0
+                ? "#f1f1f1"
+                : !lightMode && "#f1f1f1"
+            }
           >
             Web App
           </Tab>
@@ -49,8 +53,12 @@ const TabsComponent = ({ lightMode }) => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
-            color={lightMode ? "#333" : "#f1f1f1"}
+            boxShadow={lightMode ? "1px 1px 2px #ddd" : "0px 0px 3px #656565"}
+            color={
+              lightMode && selectedTab === 1
+                ? "#f1f1f1"
+                : !lightMode && "#f1f1f1"
+            }
           >
             Mobile App
           </Tab>
@@ -63,8 +71,12 @@ const TabsComponent = ({ lightMode }) => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
-            color={lightMode ? "#333" : "#f1f1f1"}
+            boxShadow={lightMode ? "1px 1px 2px #ddd" : "0px 0px 3px #656565"}
+            color={
+              lightMode && selectedTab === 2
+                ? "#f1f1f1"
+                : !lightMode && "#f1f1f1"
+            }
           >
             Blockchain
           </Tab>
@@ -77,8 +89,12 @@ const TabsComponent = ({ lightMode }) => {
             transition={"0.4s all"}
             _hover={{ bgColor: "#5580E9", color: "#fff" }}
             fontWeight={"500"}
-            boxShadow={lightMode ? "1px 1px 2px #ddd": "0px 0px 3px #656565"}
-            color={lightMode ? "#333" : "#f1f1f1"}
+            boxShadow={lightMode ? "1px 1px 2px #ddd" : "0px 0px 3px #656565"}
+            color={
+              lightMode && selectedTab === 3
+                ? "#f1f1f1"
+                : !lightMode && "#f1f1f1"
+            }
           >
             All
           </Tab>
@@ -104,6 +120,7 @@ const TabsComponent = ({ lightMode }) => {
             {appCards.map((card) => {
               return (
                 <Card
+                  lightMode={lightMode}
                   key={card.key}
                   tag={card.tag}
                   title={card.title}
@@ -119,6 +136,7 @@ const TabsComponent = ({ lightMode }) => {
             {blockchainCards.map((card) => {
               return (
                 <Card
+                  lightMode={lightMode}
                   key={card.key}
                   tag={card.tag}
                   title={card.title}
@@ -140,6 +158,7 @@ const TabsComponent = ({ lightMode }) => {
             {allCards.map((card) => {
               return (
                 <Card
+                  lightMode={lightMode}
                   key={card.key}
                   tag={card.tag}
                   title={card.title}

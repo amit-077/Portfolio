@@ -90,11 +90,11 @@ const Contact = ({ lightMode, setLightMode }) => {
     <Box
       id="contact"
       w={"100vw"}
-      h={"110vh"}
+      h={["85vh", "100vh", "110vh"]}
       bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
-      pl={"5rem"}
-      pr={"5rem"}
-      pt={"3rem"}
+      pl={["1rem", "3rem", "5rem"]}
+      pr={["1rem", "3rem", "5rem"]}
+      pt={'3rem'}
       fontFamily={"Rubik"}
       position={"relative"}
     >
@@ -107,14 +107,14 @@ const Contact = ({ lightMode, setLightMode }) => {
           pt={"1rem"}
           pb={"2rem"}
           borderRadius={"1rem"}
-          boxShadow={lightMode ? "0 0 4px #dfdfdf":  "0 0 7px #343c51"}
+          boxShadow={lightMode ? "0 0 4px #dfdfdf" : "0 0 7px #343c51"}
         >
           <Box w={"100%"} display={"flex"} justifyContent={"center"}>
             <Text
               fontSize={"2.5rem"}
               fontWeight={"700"}
               position={"relative"}
-              color={"#333"}
+              color={lightMode ? "#333" : "#f1f1f1"}
               _before={{
                 content: `""`,
                 position: "absolute",
@@ -136,7 +136,7 @@ const Contact = ({ lightMode, setLightMode }) => {
             pt={"3rem"}
             flexDir={"column"}
             justifyContent={"center"}
-            w={"50%"}
+            w={["75%", "90%", "50%"]}
             alignItems={"center"}
             gap={"2rem"}
             margin={"auto"}

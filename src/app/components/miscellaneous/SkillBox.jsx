@@ -25,6 +25,7 @@ const SkillBox = ({ icon, lightMode }) => {
         display={"flex"}
         flexDir={"column"}
         alignItems={"center"}
+        transform={['scale(0.9)','scale(0.9)','scale(1)']}
       >
         {/* Circle Icon */}
         <Box

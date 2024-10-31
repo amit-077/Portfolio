@@ -6,7 +6,7 @@ import SkillBox from "./miscellaneous/SkillBox";
 import { iconsArr } from "./miscellaneous/icons";
 import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 
-const Skills = ({lightMode}) => {
+const Skills = ({ lightMode }) => {
   return (
     <Box
       id="skills"
@@ -14,18 +14,18 @@ const Skills = ({lightMode}) => {
       minH={"100vh"}
       bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
       fontFamily={"Rubik"}
-      pl={"5rem"}
-      pr={"5rem"}
+      pl={["1.5rem", "3rem", "5rem"]}
+      pr={["1.5rem", "3rem", "5rem"]}
       userSelect={"none"}
       draggable={"false"}
       position={"relative"}
     >
       <Box
-        pt={"2rem"}
+        pt={["4rem", "3rem", "2rem"]}
         w={"100%"}
         fontWeight={"700"}
         fontSize={"2.5rem"}
-        color={lightMode ? "#000": "#f1f1f1"}
+        color={lightMode ? "#000" : "#f1f1f1"}
         position={"relative"}
         _before={{
           content: `""`,
@@ -45,10 +45,10 @@ const Skills = ({lightMode}) => {
         display={"flex"}
         flexWrap={"wrap"}
         gap={"2rem"}
-        rowGap={"2rem"}
+        columnGap={["0.5rem", "2rem", "2rem"]}
       >
         {iconsArr.map((icon, index) => {
-          return <SkillBox icon={icon} key={index} lightMode={lightMode}/>;
+          return <SkillBox icon={icon} key={index} lightMode={lightMode} />;
         })}
       </Box>
     </Box>

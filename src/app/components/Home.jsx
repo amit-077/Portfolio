@@ -60,37 +60,41 @@ const Home = ({ lightMode, setLightMode }) => {
       <Box w={"100%"}>
         <Navbar lightMode={lightMode} setLightMode={setLightMode} />
       </Box>
-      <Box pl={"5rem"} pr={"5rem"}>
+      <Box pl={["1.5rem", "3rem", "5rem"]} pr={["1.5rem", "3rem", "5rem"]}>
         <HStack w={"100%"} h={"100%"} alignItems={"flex-start"}>
           {/* left side */}
           <Box w={"55%"} fontFamily={"Rubik"} pt={"4rem"} h={"100%"}>
             <Box>
-              <Box display={"flex"}>
+              <Box
+                display={["block", "flex", "flex"]}
+                flexWrap={["nowrap", "nowrap", "nowrap"]}
+              >
                 <Text
-                  fontSize={"2.7rem"}
+                  fontSize={["2.7rem", "2.7rem", "2.7rem"]}
                   fontWeight={"500"}
                   color={lightMode ? "#333" : "#f1f1f1"}
                   display={"flex"}
                 >
-                  Hi, I&apos;m{" "}
+                  Hi, I&apos;m&nbsp;
                 </Text>
                 <Text
                   color={"#5580E9"}
                   textShadow={lightMode ? "2px 2px 4px #c9c9c9" : null}
-                  fontSize={"2.7rem"}
+                  fontSize={["2.7rem", "2.3rem", "2.7rem"]}
+                  w={["300%", "125%", "auto"]}
                 >
-                  &nbsp;Amit Kamat
+                  Amit Kamat
                 </Text>
                 {/* Background Text */}
                 <Box
                   position={"absolute"}
                   zIndex={-1}
                   left={"-1.1rem"}
-                  bottom={"14.5rem"}
+                  bottom={["21.5rem", "22.5rem", "14.5rem"]}
                 >
                   <Text
                     fontWeight={"700"}
-                    fontSize={"6.5rem"}
+                    fontSize={["4rem", "4.5rem", "6.5rem"]}
                     color={lightMode ? "#f1f1f1" : "#2d2d2d"}
                     transition={"0.7s all"}
                     textShadow={lightMode ? null : "0px 0px #5b5b5b"}
@@ -100,15 +104,20 @@ const Home = ({ lightMode, setLightMode }) => {
                 </Box>
                 {/* Background Text */}
               </Box>
-              <Box display={"flex"} alignItems={"center"}>
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                w={"170%"}
+                pt={["0.5rem", 0, 0]}
+              >
                 <Text
-                  fontSize={"1.8rem"}
+                  fontSize={["1.7rem", "1.7rem", "1.9rem"]}
                   color={lightMode ? "#333" : "#f1f1f1"}
                 >
                   A&nbsp;
                 </Text>
                 <Text
-                  fontSize={"1.8rem"}
+                  fontSize={["1.7rem", "1.7rem", "1.9rem"]}
                   color={"#5580E9"}
                   ref={el}
                   display={"inline-block"}
@@ -120,7 +129,8 @@ const Home = ({ lightMode, setLightMode }) => {
               display={"flex"}
               alignItems={"center"}
               marginTop={"4rem"}
-              gap={"2rem"}
+              gap={["0.5rem", "1rem", "2rem"]}
+              ml={["-0.5rem", 0, 0]}
             >
               <Box>
                 <Button
@@ -130,6 +140,7 @@ const Home = ({ lightMode, setLightMode }) => {
                   position={"relative"}
                   transition={"0.7s all"}
                   bgColor={lightMode ? "#f5f5f5" : "#333"}
+                  transform={["scale(0.95)", "scale(0.95)", "scale(1)"]}
                   color={lightMode ? "#333" : "#f1f1f1"}
                   border={"1.5px solid #5580E9"}
                   zIndex={1}
@@ -159,6 +170,7 @@ const Home = ({ lightMode, setLightMode }) => {
                 <a href="/Resume.pdf" download="Amit_Resume.pdf">
                   <Button
                     bgColor={"#5580E9"}
+                    transform={["scale(0.95)", "scale(0.95)", "scale(1)"]}
                     color={"#f5f5f5"}
                     px={"1rem"}
                     py={"1.4rem"}
@@ -201,7 +213,7 @@ const Home = ({ lightMode, setLightMode }) => {
             </Box>
           </Box>
           {/* right side */}
-          <Box w={"45%"}>
+          <Box w={"45%"} display={["none", "block", "block"]}>
             <Box>
               <Image
                 class="homeImg"
