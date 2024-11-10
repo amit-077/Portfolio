@@ -6,22 +6,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          defer
-          data-domain="amitkamat.vercel.app"
-          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
-        ></script>
-        <script>
-          {
-            (window.plausible =
-              window.plausible ||
-              function () {
-                " ";
-              })
-          }
-          {(window.plausible.q = window.plausible.q || []).push(arguments)}
-        </script>
-
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -68,6 +52,22 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="styles.css"></link>
         <title>Amit&apos;s Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/images/Logo4.png"></link>
+
+        <script
+          defer
+          data-domain="amitkamat.vercel.app"
+          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+        ></script>
+        <script>
+          {
+            (window.plausible =
+              window.plausible ||
+              function () {
+                " ";
+              })
+          }
+          {(window.plausible.q = window.plausible.q || []).push(arguments)}
+        </script>
       </head>
       <body style={{ overflowX: "hidden" }}>
         <ChakraProvider>{children}</ChakraProvider>
