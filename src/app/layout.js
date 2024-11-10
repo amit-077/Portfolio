@@ -1,9 +1,27 @@
+"use client";
+
 import { ChakraProvider } from "@chakra-ui/react";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <script
+          defer
+          data-domain="amitkamat.vercel.app"
+          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+        ></script>
+        <script>
+          {
+            (window.plausible =
+              window.plausible ||
+              function () {
+                " ";
+              })
+          }
+          {(window.plausible.q = window.plausible.q || []).push(arguments)}
+        </script>
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
