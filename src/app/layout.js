@@ -53,16 +53,7 @@ export default function RootLayout({ children }) {
         <title>Amit&apos;s Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/images/Logo4.png"></link>
 
-        <script defer data-domain="amitkamat.vercel.app" src="http://localhost/js/script.js">
-          {
-            (window.plausible =
-              window.plausible ||
-              function () {
-                " ";
-              })
-          }
-          {(window.plausible.q = window.plausible.q || []).push(arguments)}
-        </script>
+        <script defer data-domain="amitkamat.vercel.app" src="http://localhost/js/script.js"></script>
       </head>
       <body style={{ overflowX: "hidden" }}>
         <ChakraProvider>{children}</ChakraProvider>
