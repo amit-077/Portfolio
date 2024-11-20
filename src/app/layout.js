@@ -53,12 +53,7 @@ export default function RootLayout({ children }) {
         <title>Amit&apos;s Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/images/Logo4.png"></link>
 
-        <script
-          defer
-          data-domain="amitkamat.vercel.app"
-          src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
-        ></script>
-        <script>
+        <script defer data-domain="amitkamat.vercel.app" src="http://localhost/js/script.js"></script>
           {
             (window.plausible =
               window.plausible ||
