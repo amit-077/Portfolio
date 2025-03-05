@@ -8,7 +8,7 @@ import { ArrowForwardIcon, DownloadIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import Socials from "./miscellaneous/Socials";
 import { BoltIcon, BulbIcon, CodeIcon, LaptopIcon } from "./utils/randomIcons";
-
+import Link from "next/link"
 // #5E3BE3
 
 const Home = ({ lightMode, setLightMode }) => {
@@ -132,6 +132,7 @@ const Home = ({ lightMode, setLightMode }) => {
               gap={["0.5rem", "1rem", "2rem"]}
               ml={["-0.5rem", 0, 0]}
             >
+              <Link href="#contact">
               <Box>
                 <Button
                   colorScheme={"blue"}
@@ -166,6 +167,7 @@ const Home = ({ lightMode, setLightMode }) => {
                   Hire Me
                 </Button>
               </Box>
+                </Link>
               <Box>
                 <a href="/Resume.pdf" download="Amit_Resume.pdf">
                   <Button
