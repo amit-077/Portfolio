@@ -10,7 +10,7 @@ const Skills = ({ lightMode }) => {
   return (
     <Box
       id="skills"
-      w={"100vw"}
+      w={{base: "100vw", md: "100vw", lg: "100vw"}}
       minH={"100vh"}
       bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
       fontFamily={"Rubik"}
@@ -31,7 +31,7 @@ const Skills = ({ lightMode }) => {
           content: `""`,
           position: "absolute",
           bottom: 0,
-          left: -10,
+          left: [-4, -7, -10],
           height: "5%",
           width: "35%",
           bgColor: "#5580E9",
@@ -42,7 +42,10 @@ const Skills = ({ lightMode }) => {
       </Box>
       <Box
         mt={"3rem"}
+        width={'100%'}
         display={"flex"}
+        justifyContent={{base: 'space-between', md: "left", lg: 'left'}}
+        alignItems={'center'}
         flexWrap={"wrap"}
         gap={"2rem"}
         columnGap={["0.5rem", "2rem", "2rem"]}

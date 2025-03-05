@@ -204,7 +204,7 @@ const Contact = ({ lightMode, setLightMode }) => {
             </Box>
           </Box>
         </Box>
-        <Box>
+        <Box display={['none', 'none', 'block']}>
           <BulbIcon bottom={400} left={150} />
           <BranchIcon top={430} left={300} />
           <NodeIcon right={150} bottom={230} />

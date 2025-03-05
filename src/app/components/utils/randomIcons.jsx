@@ -13,7 +13,7 @@ const BoltIcon = ({ top, bottom, left, right, pos }) => {
         right={right}
         fontSize={"1.3rem"}
       >
-        <i class="fa-solid fa-bolt"></i>
+        <i className="fa-solid fa-bolt"></i>
       </Text>
     </Box>
   );
@@ -29,7 +29,7 @@ const BulbIcon = ({ top, bottom, left, right, pos }) => {
         left={left}
         fontSize={"1.3rem"}
       >
-        <i class="fa-regular fa-lightbulb"></i>
+        <i className="fa-regular fa-lightbulb"></i>
       </Text>
     </Box>
   );
@@ -45,7 +45,7 @@ const CodeIcon = ({ top, bottom, left, right, pos }) => {
         right={right}
         fontSize={"1.3rem"}
       >
-        <i class="fa-solid fa-code"></i>
+        <i className="fa-solid fa-code"></i>
       </Text>
     </Box>
   );
@@ -62,7 +62,7 @@ const LaptopIcon = ({ top, bottom, left, right, pos }) => {
         fontSize={"1.3rem"}
         opacity={"0.6"}
       >
-        <i class="fa-solid fa-laptop-code"></i>
+        <i className="fa-solid fa-laptop-code"></i>
       </Text>
     </Box>
   );
@@ -78,7 +78,7 @@ const FolderIcon = ({ top, bottom, left, right, pos }) => {
         right={right}
         fontSize={"1.3rem"}
       >
-        <i class="fa-solid fa-folder-open"></i>
+        <i className="fa-solid fa-folder-open"></i>
       </Text>
     </Box>
   );
@@ -95,7 +95,7 @@ const BranchIcon = ({ top, bottom, left, right, pos }) => {
         fontSize={"1.3rem"}
         opacity={"0.4"}
       >
-        <i class="fa-solid fa-code-branch"></i>
+        <i className="fa-solid fa-code-branch"></i>
       </Text>
     </Box>
   );
@@ -111,7 +111,7 @@ const NodeIcon = ({ top, bottom, left, right, pos }) => {
         right={right}
         fontSize={"1.3rem"}
       >
-        <i class="fa-solid fa-circle-nodes"></i>
+        <i className="fa-solid fa-circle-nodes"></i>
       </Text>
     </Box>
   );
@@ -128,7 +128,7 @@ const BugIcon = ({ top, bottom, left, right, pos }) => {
         fontSize={"1.4rem"}
         opacity={"0.2"}
       >
-        <i class="fa-solid fa-bug"></i>
+        <i className="fa-solid fa-bug"></i>
       </Text>
     </Box>
   );

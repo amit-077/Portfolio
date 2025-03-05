@@ -11,7 +11,7 @@ const TabsComponent = ({ lightMode }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <Box mt={"2rem"}>
+    <Box mt={"2rem"} w={'100%'}>
       <Tabs
         variant={"solid-rounded"}
         colorScheme={"white"}
@@ -20,12 +20,14 @@ const TabsComponent = ({ lightMode }) => {
         }}
         display={"flex"}
         flexDir={"column"}
+        flexWrap={'wrap'}
         textAlign={"center"}
-        w={"100%"}
         justifyContent={"center"}
+        alignItems={'center'}
+        w={"100%"}
         isLazy={true}
       >
-        <TabList gap={"2rem"} justifyContent={"center"}>
+        <TabList w={'100%'} gap={"2rem"} display={'flex'} alignItems={'center'} justifyContent={{base: "space-around", md:"center", lg: "center"}} flexWrap={'wrap'}>
           <Tab
             tabIndex={0}
             bgColor={
@@ -96,11 +98,11 @@ const TabsComponent = ({ lightMode }) => {
                 : !lightMode && "#f1f1f1"
             }
           >
-            All
+            All Projects
           </Tab>
         </TabList>
         <TabPanels mt={"2rem"}>
-          <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"}>
+          <TabPanel display={"flex"} flexWrap={'wrap'} justifyContent={"center"} gap={"3rem"}>
             {webCards.map((card) => {
               return (
                 <Card
@@ -116,7 +118,7 @@ const TabsComponent = ({ lightMode }) => {
               );
             })}
           </TabPanel>
-          <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"}>
+          <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"} flexWrap={"wrap"} alignItems={'center'}>
             {appCards.map((card) => {
               return (
                 <Card
@@ -132,7 +134,7 @@ const TabsComponent = ({ lightMode }) => {
               );
             })}
           </TabPanel>
-          <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"}>
+          <TabPanel display={"flex"} justifyContent={"center"} gap={"3rem"} flexWrap={"wrap"}>
             {blockchainCards.map((card) => {
               return (
                 <Card
@@ -149,9 +151,9 @@ const TabsComponent = ({ lightMode }) => {
           </TabPanel>
           <TabPanel
             display={"flex"}
-            justifyContent={"left"}
+            justifyContent={{base: "center", md: "left", lg: "left"}}
             gap={"3rem"}
-            pl={"2.5rem"}
+            pl={{base: 'auto', md: "2.5rem", lg: "2.5rem"}}
             flexWrap={"wrap"}
             h={"100%"}
           >

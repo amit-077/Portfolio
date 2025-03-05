@@ -9,8 +9,8 @@ const Navbar = ({ lightMode, setLightMode }) => {
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      pl={"5rem"}
-      pr={"5rem"}
+      pl={["0.25rem", "3rem", "5rem"]}
+      pr={["1rem", "3rem", "5rem"]}
       pt={"1rem"}
       pb={"0.5rem"}
       fontFamily={"Open Sans"}
@@ -50,7 +50,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
         </Box>
       </Box>
       <Box display={"flex"} gap={"3rem"} alignItems={"center"}>
-        <Box cursor={"pointer"}>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
           <Text
             fontWeight={"500"}
             _hover={{ color: "#5580e9" }}
@@ -61,7 +61,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             <Link _hover={{ textDecoration: "none" }}>Home</Link>
           </Text>
         </Box>
-        <Box cursor={"pointer"}>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
           <Text
             fontWeight={"500"}
             _hover={{ color: "#5580e9" }}
@@ -84,7 +84,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             Education
           </Text>
         </Box> */}
-        <Box cursor={"pointer"}>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
           <Text
             fontWeight={"500"}
             _hover={{ color: "#5580e9" }}
@@ -97,7 +97,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             </Link>
           </Text>
         </Box>
-        <Box cursor={"pointer"}>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
           <Text
             fontWeight={"500"}
             _hover={{ color: "#5580e9" }}
@@ -110,7 +110,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             </Link>
           </Text>
         </Box>
-        <Box cursor={"pointer"}>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
           <Text
             fontWeight={"500"}
             _hover={{ color: "#5580e9" }}

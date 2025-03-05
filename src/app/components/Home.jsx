@@ -37,8 +37,8 @@ const Home = ({ lightMode, setLightMode }) => {
 
   return (
     <Box
-      w={"100vw"}
-      h={"100vh"}
+      w={{base: "100vw", md: "100vw", lg: "100vw"}}
+      h={{base: "80vh", md: "100vh", lg: "100vh"}}
       bgColor={"#f5f5f5"}
       _before={{
         content: `""`,
@@ -216,7 +216,7 @@ const Home = ({ lightMode, setLightMode }) => {
           <Box w={"45%"} display={["none", "block", "block"]}>
             <Box>
               <Image
-                class="homeImg"
+                className="homeImg"
                 src={lightMode ? "/images/img1.png" : "/images/img1.png"}
                 width={400}
                 height={400}
@@ -227,7 +227,7 @@ const Home = ({ lightMode, setLightMode }) => {
         </HStack>
       </Box>
       {/* Random icons */}
-      <Box>
+      <Box display={['none', 'none', 'block']}>
         <BoltIcon top={100} right={200} />
         <BulbIcon bottom={2} left={500} />
         <CodeIcon top={160} right={30} />

@@ -6,8 +6,8 @@ import { BranchIcon, BugIcon, FolderIcon, NodeIcon } from "./utils/randomIcons";
 const About = ({ lightMode }) => {
   return (
     <Box
-      w={"100vw"}
-      minH={"100vh"}
+      w={{base: "100vw", md: "100vw", lg: "100vw"}}
+      h={{base: "100vh", md: "100vh", lg: "100vh"}}
       bgGradient={
         lightMode
           ? "linear-gradient(to top left,#f2f3f2 50%, #f5f5f5 50%)"
@@ -25,6 +25,7 @@ const About = ({ lightMode }) => {
         alignItems={"flex-start"}
         flexWrap={["wrap", "wrap", "nowrap"]}
         justifyContent={"center"}
+        paddingTop={{base: "16rem", md: 0, lg: 0}}
         pl={["1rem", 0, 0]}
         pr={["1rem", 0, 0]}
       >
@@ -33,7 +34,7 @@ const About = ({ lightMode }) => {
           mt={["-14rem", 0, 0]}
           w={["90%", "90%", "50%"]}
           h={"100vh"}
-          display={"flex"}
+          display={{base: "none", md: "flex", lg: "flex"}}
           justifyContent={"center"}
           alignItems={"center"}
         >
@@ -111,7 +112,7 @@ const About = ({ lightMode }) => {
         </Box>
       </HStack>
       {/* Background Icons */}
-      <Box>
+      <Box display={['none', 'none', 'block']}>
         <FolderIcon top={50} right={300} />
         <BranchIcon top={150} left={600} />
         <NodeIcon right={150} bottom={130} />

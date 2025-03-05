@@ -65,7 +65,7 @@ const Card = ({ tag, title, description, image, link, view, lightMode }) => {
                 borderRadius={"full"}
               >
                 <Link href={view} isExternal>
-                  <i class="fa-solid fa-eye"></i>
+                  <i className="fa-solid fa-eye"></i>
                 </Link>
               </Text>
             </Button>
@@ -85,7 +85,7 @@ const Card = ({ tag, title, description, image, link, view, lightMode }) => {
                 borderRadius={"full"}
               >
                 <Link href={link} isExternal>
-                  <i class="fa-brands fa-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </Link>
               </Text>
             </Button>
