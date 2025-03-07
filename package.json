@@ -20,6 +20,7 @@
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18",
     "react-tilt": "^1.0.2",
+    "react-vertical-timeline-component": "^3.5.3",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

@@ -11,7 +11,8 @@ const Skills = ({ lightMode }) => {
     <Box
       id="skills"
       w={{base: "100vw", md: "100vw", lg: "100vw"}}
-      minH={"100vh"}
+      minH={'80vh'}
+      maxH={"200vh"}
       bgColor={lightMode ? "#f5f5f5" : "#2c2c2c"}
       fontFamily={"Rubik"}
       pl={["1.5rem", "3rem", "5rem"]}

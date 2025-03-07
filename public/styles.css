@@ -995,6 +995,20 @@ html {
   background-position: 0 0 !important;
 }
 
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.timelineBox {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.vertical-timeline::before{
+  border-radius: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   body {
