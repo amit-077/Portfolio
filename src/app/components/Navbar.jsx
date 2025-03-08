@@ -58,7 +58,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             _active={{ opacity: 0.6 }}
             color={"#5580e9"}
           >
-            <Link _hover={{ textDecoration: "none" }}>Home</Link>
+            <Link _hover={{ textDecoration: "none" }} href="#home">Home</Link>
           </Text>
         </Box>
         <Box cursor={"pointer"} display={['none', 'block', 'block']}>
@@ -95,6 +95,17 @@ const Navbar = ({ lightMode, setLightMode }) => {
             <Link _hover={{ textDecoration: "none" }} href="#skills">
               Skills
             </Link>
+          </Text>
+        </Box>
+        <Box cursor={"pointer"} display={['none', 'block', 'block']}>
+          <Text
+            fontWeight={"500"}
+            _hover={{ color: "#5580e9" }}
+            transition={"0.3s all"}
+            _active={{ opacity: 0.6 }}
+            color={"#5580e9"}
+          >
+            <Link _hover={{ textDecoration: "none" }} href="#experience">Experience</Link>
           </Text>
         </Box>
         <Box cursor={"pointer"} display={['none', 'block', 'block']}>
