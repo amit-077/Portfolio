@@ -103,7 +103,7 @@ const Navbar = ({ lightMode, setLightMode }) => {
             _hover={{ color: "#5580e9" }}
             transition={"0.3s all"}
             _active={{ opacity: 0.6 }}
-            color={"#5580e9"}
+            color={lightMode ? "#333" : "#f1f1f1"}
           >
             <Link _hover={{ textDecoration: "none" }} href="#experience">Experience</Link>
           </Text>
