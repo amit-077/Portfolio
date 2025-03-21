@@ -2,7 +2,7 @@ export const experiences= [
     {
       title: 'Android Developer Intern',
       companyName: 'Education4ol',
-      // icon: education4ol1,
+      icon: "./company/education4ol1.png",
       iconBg: '#E6DEDD',
       date: 'Dec 2023 - Feb 2024',
       points: [
@@ -14,7 +14,7 @@ export const experiences= [
     {
       title: 'Web Developer Intern',
       companyName: 'Cognifyz Technologies',
-      // icon: cognifyz,
+      icon: "./company/cognifyz.png",
       iconBg: '#383E56',
       date: 'Jan 2024 - Feb 2024',
       points: [
@@ -26,7 +26,7 @@ export const experiences= [
     {
       title: 'Project Intern',
       companyName: 'Dassault Systeme`s La Fondation',
-      // icon: dassault,
+      icon: "./company/dassault.png",
       iconBg: '#E6DEDD',
       date: 'Aug 2024 - Present',
       points: [
@@ -38,7 +38,7 @@ export const experiences= [
     {
       title: 'Full Stack Developer Intern',
       companyName: 'BurdenOff Consulting Services',
-      // icon: burdenoff,
+      icon: "./company/burdenoff.png",
       iconBg: '#c6c6c6',
       date: 'Nov 2024 - Present',
       points: [

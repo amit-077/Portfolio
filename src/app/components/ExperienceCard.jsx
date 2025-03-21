@@ -37,12 +37,13 @@ const ExperienceCard = ({experience, lightMode}) => {
                     src={experience.icon}
                     alt={experience.companyName}
                     style={{
-                    height: "60%",
-                    width: "60%",
-                    objectFit: "contain",
-                    visibility: "visible"
+                        height: experience.companyName === "Dassault Systeme`s La Fondation" ? "90%" : "70%",
+                        width: experience.companyName === "Dassault Systeme`s La Fondation" ? "90%" : "70%",
+                        objectFit: "contain",
+                        visibility: "visible"
                     }}
                 />
+
                 </div>
             }
             >
