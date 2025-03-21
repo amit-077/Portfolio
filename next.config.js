@@ -6,46 +6,28 @@ const withPWA = require("next-pwa")({
     register: true,
     skipWaiting: true,
     disable: process.env.NODE_ENV === "development",
-    buildExcludes: [/middleware-manifest.json$/],
     runtimeCaching: [
       {
-        urlPattern: /^https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/i,
-        handler: "CacheFirst",
+        urlPattern: /^\/offline$/,
+        handler: "CacheFirst", // Serve from cache first
         options: {
-          cacheName: "google-fonts",
-          expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 },
-        },
-      },
-      {
-        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/.*/i,
-        handler: "CacheFirst",
-        options: {
-          cacheName: "cdn-assets",
-          expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 30 },
+          cacheName: "offline-cache",
+          expiration: { maxEntries: 1 },
         },
       },
       {
         urlPattern: /\/_next\/static\/.*/i,
         handler: "StaleWhileRevalidate",
         options: {
-          cacheName: "static-resources",
+          cacheName: "static-assets",
           expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 7 },
-        },
-      },
-      {
-        urlPattern: /\/api\/.*/i,
-        handler: "NetworkFirst",
-        options: {
-          cacheName: "api-calls",
-          networkTimeoutSeconds: 10,
-          expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 },
         },
       },
       {
         urlPattern: /.*/i,
         handler: "NetworkFirst",
         options: {
-          cacheName: "general-assets",
+          cacheName: "general-cache",
           expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 7 },
         },
       },
@@ -57,6 +39,7 @@ const withPWA = require("next-pwa")({
       appDir: true,
     },
   });
+  
   
 
 module.exports = nextConfig;
