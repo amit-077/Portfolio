@@ -197,7 +197,7 @@ const Contact = ({ lightMode, setLightMode }) => {
                 _hover={{
                   bgColor: "rgba(85,128,233, 0.8)",
                 }}
-                onClick={sendEmail}
+{/*                 onClick={sendEmail} */}
               >
                 Send Message
               </Button>
